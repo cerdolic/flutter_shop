@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15" version="24.7.5">
+  <diagram name="Simple Online Store" id="6WuDgLlzYv2dOmHPhXlu">
+    <mxGraphModel dx="1241" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XprZkscw_yaNwKNDxqcO-3" value="Запуск Приложения" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-4" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-3" target="XprZkscw_yaNwKNDxqcO-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-5" value="Проверка Авторизации" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-6" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-5" target="XprZkscw_yaNwKNDxqcO-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-7" value="Экран Регистрации/Входа" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="140" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-8" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-5" target="XprZkscw_yaNwKNDxqcO-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-9" value="Экран Главного Меню" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="140" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-10" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-7" target="XprZkscw_yaNwKNDxqcO-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-11" value="Ввод Телефона и Подтверждение" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-12" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-11" target="XprZkscw_yaNwKNDxqcO-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-13" value="Проверка Firebase Auth" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="260" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-14" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-13" target="XprZkscw_yaNwKNDxqcO-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-15" value="Успешная Регистрация/Вход" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="320" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-16" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-15" target="XprZkscw_yaNwKNDxqcO-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-17" value="Переход в Профиль" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="380" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-18" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-9" target="XprZkscw_yaNwKNDxqcO-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-19" value="Профиль Пользователя" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-20" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-9" target="XprZkscw_yaNwKNDxqcO-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-21" value="Список Товаров" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="260" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-22" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-21" target="XprZkscw_yaNwKNDxqcO-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-23" value="Поиск и Фильтры Товаров" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="320" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-24" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-23" target="XprZkscw_yaNwKNDxqcO-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-25" value="Карточка Товара" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="380" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-26" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-25" target="XprZkscw_yaNwKNDxqcO-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-27" value="Добавление в Корзину" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="440" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-28" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-27" target="XprZkscw_yaNwKNDxqcO-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-29" value="Просмотр Корзины" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="500" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-30" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-29" target="XprZkscw_yaNwKNDxqcO-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-31" value="Иммитация Оплаты" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="560" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-32" value="" style="edgeStyle=elbowEdgeStyle;rounded=1;" parent="1" source="XprZkscw_yaNwKNDxqcO-31" target="XprZkscw_yaNwKNDxqcO-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XprZkscw_yaNwKNDxqcO-33" value="История Заказов" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="620" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
