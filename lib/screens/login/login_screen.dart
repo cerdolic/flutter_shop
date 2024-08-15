@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop/theme/images.dart';
+import 'package:shop/widgets/button/main_button.dart';
 import 'package:shop/widgets/input/labeled_input.dart';
-
-import '../../widgets/button/main_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -21,80 +20,54 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            const SizedBox(
-              height: 84,
-            ),
-            const Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    children: [
-                      Text(
-                        'Hello Again!',
-                        style: TextStyle(
-                          color: Color(0xFF1A242F),
-                          fontSize: 28,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text(
-                        'Welcome Back You’ve Been Missed!',
-                        style: TextStyle(
-                          color: Color(0xFF707B81),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            const LabeledInput(labelText: 'Email Address'),
-            const SizedBox(
-              height: 30,
-            ),
-            LabeledInput(
-              labelText: 'Password',
-              isPassword: true,
-              suffixIcon: SvgPicture.asset(eye),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+            const SizedBox(height: 84),
+            const Column(
               children: [
                 Text(
-                  'Recovery Password',
-                  textAlign: TextAlign.right,
+                  'Hello Again!',
+                  style: TextStyle(
+                    color: Color(0xFF1A242F),
+                    fontSize: 28,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Text(
+                  'Welcome Back You’ve Been Missed!',
                   style: TextStyle(
                     color: Color(0xFF707B81),
-                    fontSize: 13,
+                    fontSize: 16,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 30,
+            const SizedBox(height: 50),
+            const LabeledInput(labelText: 'Email Address'),
+            const SizedBox(height: 30),
+            LabeledInput(
+              labelText: 'Password',
+              isPassword: true,
+              suffixIcon: SvgPicture.asset(eye),
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: MainButton(
-                    title: 'Sign In',
-                    onClick: () {},
-                  ),
+            const SizedBox(height: 12),
+            const Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Recovery Password',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  color: Color(0xFF707B81),
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400,
                 ),
-              ],
+              ),
             ),
-            const SizedBox(
-              height: 30,
+            const SizedBox(height: 30),
+            MainButton(
+              title: 'Sign In',
+              onClick: () {},
             ),
+            const SizedBox(height: 30),
             Container(
               height: 54,
               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 15),
