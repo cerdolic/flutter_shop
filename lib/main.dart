@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/login/login_screen.dart';
+import 'package:shop/screens/login/password_recovery_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Airbnb Cereal App',
       ),
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home: const PasswordRecoveryScreen(),
     );
   }
 }

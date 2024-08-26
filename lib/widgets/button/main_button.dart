@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/theme/colors.dart';
+import 'package:shop/theme/text_styles.dart';
 
 class MainButton extends StatelessWidget {
   const MainButton({
@@ -21,7 +23,7 @@ class MainButton extends StatelessWidget {
     return Container(
       height: height,
       decoration: ShapeDecoration(
-        color: const Color(0xFF5B9EE1),
+        color: unitedNationsBlue,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(radius),
         ),
@@ -29,15 +31,9 @@ class MainButton extends StatelessWidget {
       child: TextButton(
         onPressed: onClick,
         child: Center(
-          child: Center(
-            child: Text(
-              title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
+          child: Text(
+            title,
+            style: white_18_500,
           ),
         ),
       ),
