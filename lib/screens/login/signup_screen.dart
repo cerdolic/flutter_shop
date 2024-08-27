@@ -7,14 +7,14 @@ import 'package:shop/widgets/button/google_button.dart';
 import 'package:shop/widgets/button/main_button.dart';
 import 'package:shop/widgets/input/labeled_input.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,31 +27,24 @@ class _LoginScreenState extends State<LoginScreen> {
             Column(
               children: [
                 Text(
-                  'Hello Again!',
+                  'Create Account',
                   style: darkGunmetal_28_500,
                 ),
                 Text(
-                  'Welcome Back You’ve Been Missed!',
+                  'Let’s Create Account Together',
                   style: auroMetalSaurus_16_400,
                 ),
               ],
             ),
             const SizedBox(height: 50),
+            const LabeledInput(labelText: 'Your Name'),
+            const SizedBox(height: 30),
             const LabeledInput(labelText: 'Email Address'),
             const SizedBox(height: 30),
             LabeledInput(
               labelText: 'Password',
               isPassword: true,
               suffixIcon: SvgPicture.asset(eye),
-            ),
-            const SizedBox(height: 12),
-            Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Recovery Password',
-                textAlign: TextAlign.right,
-                style: auroMetalSaurus_13_400,
-              ),
             ),
             const SizedBox(height: 30),
             MainButton(
@@ -67,12 +60,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Don’t have an account?',
+                      'Already have an account?',
                       style: auroMetalSaurus_12_400,
                     ),
                     const SizedBox(width: 4),
                     Text(
-                      'Sign Up for free',
+                      'Sign in',
                       style: darkGunmetal_12_500,
                     )
                   ],
