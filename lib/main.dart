@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/screens/search/search_screen.dart';
+import 'package:shop/screens/login/signup_screen.dart';
 import 'package:shop/theme/colors.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SearchScreen(),
+      home: const SignUpScreen(),
     );
   }
 }

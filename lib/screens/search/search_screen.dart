@@ -107,18 +107,20 @@ class _SearchScreenState extends State<SearchScreen> {
 
   void _handleSearch() {
     final text = _searchController.text.toLowerCase();
-    searchResults.clear();
-    if (text.isNotEmpty) {
-      searchResults = searchPlaceholders
-          .where((e) => e.toLowerCase().contains(text))
-          .toList();
-    }
-    setState(() {});
+    setState(() {
+      searchResults = text.isNotEmpty
+          ? searchPlaceholders
+              .where((e) => e.toLowerCase().contains(text))
+              .toList()
+          : [];
+    });
   }
 
   void _cancelSearch() {
     setState(() {
       _searchController.clear();
+      searchResults = [];
     });
+    FocusScope.of(context).unfocus();
   }
 }
