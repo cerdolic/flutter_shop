@@ -4,14 +4,9 @@ import 'package:shop/theme/text_styles.dart';
 import 'package:shop/widgets/button/main_button.dart';
 import 'package:shop/widgets/input/labeled_input.dart';
 
-class PasswordRecoveryScreen extends StatefulWidget {
+class PasswordRecoveryScreen extends StatelessWidget {
   const PasswordRecoveryScreen({super.key});
 
-  @override
-  State<PasswordRecoveryScreen> createState() => _PasswordRecoveryScreenState();
-}
-
-class _PasswordRecoveryScreenState extends State<PasswordRecoveryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

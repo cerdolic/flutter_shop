@@ -19,21 +19,16 @@ class GoogleButton extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            children: [
-              SizedBox(
-                width: 24,
-                height: 24,
-                child: SvgPicture.asset(google),
-              ),
-              const SizedBox(width: 8),
-              Text(
-                'Sign in with google',
-                style: darkGunmetal_18_500,
-              ),
-            ],
+          SizedBox(
+            width: 24,
+            height: 24,
+            child: SvgPicture.asset(google),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            'Sign in with google',
+            style: darkGunmetal_18_500,
           ),
         ],
       ),
