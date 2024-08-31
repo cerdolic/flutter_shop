@@ -12,3 +12,4 @@ extension ImageAsset on String {
 
 String google = 'google'.toSvgAsset();
 String eye = 'eye'.toSvgAsset();
+String search = 'search'.toSvgAsset();

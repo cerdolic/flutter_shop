@@ -14,6 +14,10 @@ TextStyle auroMetalSaurusText = const TextStyle(
   color: auroMetalSaurus,
 );
 
+TextStyle unitedNationsBlueText = const TextStyle(
+  color: unitedNationsBlue,
+);
+
 TextStyle darkGunmetal_12 = darkGunmetalText.copyWith(
   fontSize: 12,
 );
@@ -24,6 +28,18 @@ TextStyle auroMetalSaurus_12 = auroMetalSaurusText.copyWith(
 
 TextStyle auroMetalSaurus_13 = auroMetalSaurusText.copyWith(
   fontSize: 13,
+);
+
+TextStyle darkGunmetal_14 = darkGunmetalText.copyWith(
+  fontSize: 14,
+);
+
+TextStyle auroMetalSaurus_14 = auroMetalSaurusText.copyWith(
+  fontSize: 14,
+);
+
+TextStyle unitedNationsBlue_14 = unitedNationsBlueText.copyWith(
+  fontSize: 14,
 );
 
 TextStyle auroMetalSaurus_16 = auroMetalSaurusText.copyWith(
@@ -54,11 +70,23 @@ TextStyle auroMetalSaurus_13_400 = auroMetalSaurus_13.copyWith(
   fontWeight: FontWeight.w400,
 );
 
+TextStyle auroMetalSaurus_14_400 = auroMetalSaurus_14.copyWith(
+  fontWeight: FontWeight.w400,
+);
+
+TextStyle darkGunmetal_14_400 = darkGunmetal_14.copyWith(
+  fontWeight: FontWeight.w400,
+);
+
 TextStyle auroMetalSaurus_16_400 = auroMetalSaurus_16.copyWith(
   fontWeight: FontWeight.w400,
 );
 
 TextStyle darkGunmetal_12_500 = darkGunmetal_12.copyWith(
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle unitedNationsBlue_14_500 = unitedNationsBlue_14.copyWith(
   fontWeight: FontWeight.w500,
 );
 

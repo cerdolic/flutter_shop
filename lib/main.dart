@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shop/screens/login/login_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shop/screens/login/signup_screen.dart';
+import 'package:shop/theme/colors.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,9 +19,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Airbnb Cereal App',
+        scaffoldBackgroundColor: ghostWhite,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: ghostWhite,
+        ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home: const SignUpScreen(),
     );
   }
 }

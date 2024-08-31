@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop/theme/colors.dart';
 import 'package:shop/theme/images.dart';
 import 'package:shop/theme/text_styles.dart';
 import 'package:shop/widgets/button/google_button.dart';
@@ -18,7 +17,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ghostWhite,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(

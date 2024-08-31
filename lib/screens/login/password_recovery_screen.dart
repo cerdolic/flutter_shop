@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/theme/colors.dart';
 import 'package:shop/theme/text_styles.dart';
 import 'package:shop/widgets/button/main_button.dart';
 import 'package:shop/widgets/input/labeled_input.dart';
@@ -10,7 +9,6 @@ class PasswordRecoveryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ghostWhite,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
