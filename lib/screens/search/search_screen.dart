@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,13 +16,17 @@ class SearchScreen extends ConsumerStatefulWidget {
 
 class _SearchScreenState extends ConsumerState<SearchScreen> {
   late TextEditingController _searchController;
+  Timer? debounce;
 
   @override
   void initState() {
     super.initState();
     _searchController = TextEditingController();
     _searchController.addListener(() {
-      ref.read(searchProvider.notifier).search(_searchController.text);
+      debounce?.cancel();
+      debounce = Timer(const Duration(milliseconds: 300), () {
+        ref.read(searchProvider.notifier).search(_searchController.text);
+      });
     });
   }
 
