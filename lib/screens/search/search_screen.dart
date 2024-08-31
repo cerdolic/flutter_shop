@@ -1,42 +1,56 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop/screens/search/search_state_notifier.dart';
 import 'package:shop/theme/images.dart';
 import 'package:shop/theme/text_styles.dart';
 
-class SearchScreen extends StatefulWidget {
+class SearchScreen extends ConsumerStatefulWidget {
   const SearchScreen({super.key});
 
   @override
-  State<SearchScreen> createState() => _SearchScreenState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _SearchScreenState();
 }
 
-class _SearchScreenState extends State<SearchScreen> {
-  final List<String> searchPlaceholders = [
-    'Nike Air Max Shoes',
-    'Nike Jordan Shoes',
-    'Nike Air Force Shoes',
-    'Nike Club Max Shoes',
-    'Snakers Nike Shoes',
-    'Regular Shoes'
-  ];
-  final TextEditingController _searchController = TextEditingController();
-  List<String> searchResults = [];
+class _SearchScreenState extends ConsumerState<SearchScreen> {
+  late TextEditingController _searchController;
+  Timer? debounce;
 
   @override
   void initState() {
     super.initState();
-    _searchController.addListener(_handleSearch);
+    _searchController = TextEditingController();
+    _searchController.addListener(() {
+      debounce?.cancel();
+      debounce = Timer(const Duration(milliseconds: 300), () {
+        ref.read(searchProvider.notifier).search(_searchController.text);
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final searchResults = ref.watch(searchProvider);
+
     return Scaffold(
       appBar: AppBar(
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: TextButton(
-              onPressed: _cancelSearch,
+              onPressed: () {
+                _searchController.clear();
+                ref.read(searchProvider.notifier).clearSearch();
+                FocusScope.of(context).unfocus();
+              },
               child: Text(
                 'Cancel',
                 style: unitedNationsBlue_14_500,
@@ -97,30 +111,5 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _searchController.dispose();
-    super.dispose();
-  }
-
-  void _handleSearch() {
-    final text = _searchController.text.toLowerCase();
-    setState(() {
-      searchResults = text.isNotEmpty
-          ? searchPlaceholders
-              .where((e) => e.toLowerCase().contains(text))
-              .toList()
-          : [];
-    });
-  }
-
-  void _cancelSearch() {
-    setState(() {
-      _searchController.clear();
-      searchResults = [];
-    });
-    FocusScope.of(context).unfocus();
   }
 }
