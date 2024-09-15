@@ -1,22 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shop/screens/login/signup_screen.dart';
+import 'package:go_router/go_router.dart';
+import 'package:shop/router.dart';
 import 'package:shop/theme/colors.dart';
 
 void main() {
   runApp(
-    const ProviderScope(
+    ProviderScope(
       child: MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  final GoRouter _router = GoRouter(
+    initialLocation: '/signup',
+    errorBuilder: (context, state) => ErrorPage(error: state.error.toString()),
+    redirect: (context, state) {
+      return null;
+    },
+    routes: routes,
+  );
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: ThemeData(
         fontFamily: 'Airbnb Cereal App',
         scaffoldBackgroundColor: ghostWhite,
@@ -25,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SignUpScreen(),
+      routerConfig: _router,
     );
   }
 }
