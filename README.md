@@ -42,10 +42,6 @@
    "name":"string",
    "phone":"string",
    "address":"string",
-   "orders":[
-   "orderId1",
-   "orderId2"
-   ]
    }
    
    ```
