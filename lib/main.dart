@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
 
   final GoRouter _router = GoRouter(
-    initialLocation: '/signup',
+    initialLocation: '/tabs',
     errorBuilder: (context, state) => ErrorPage(error: state.error.toString()),
     redirect: (context, state) {
       return null;

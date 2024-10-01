@@ -50,6 +50,10 @@ TextStyle darkGunmetal_16 = darkGunmetalText.copyWith(
   fontSize: 16,
 );
 
+TextStyle white_16 = whiteText.copyWith(
+  fontSize: 16,
+);
+
 TextStyle white_18 = whiteText.copyWith(
   fontSize: 18,
 );
@@ -90,11 +94,19 @@ TextStyle unitedNationsBlue_14_500 = unitedNationsBlue_14.copyWith(
   fontWeight: FontWeight.w500,
 );
 
+TextStyle darkGunmetal_16_400 = darkGunmetal_16.copyWith(
+  fontWeight: FontWeight.w400,
+);
+
 TextStyle darkGunmetal_16_500 = darkGunmetal_16.copyWith(
   fontWeight: FontWeight.w500,
 );
 
 TextStyle darkGunmetal_18_500 = darkGunmetal_18.copyWith(
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle white_16_500 = white_16.copyWith(
   fontWeight: FontWeight.w500,
 );
 
