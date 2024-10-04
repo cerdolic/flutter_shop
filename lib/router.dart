@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shop/screens/login/login_screen.dart';
 import 'package:shop/screens/login/signup_screen.dart';
+import 'package:shop/screens/tabs/tabs_screen.dart';
 
 var routes = [
   GoRoute(
     path: '/signup',
     builder: (context, state) => const SignUpScreen(),
+  ),
+  GoRoute(
+    path: '/tabs',
+    builder: (context, state) => const TabsScreen(),
   ),
   GoRoute(
     path: '/login',
