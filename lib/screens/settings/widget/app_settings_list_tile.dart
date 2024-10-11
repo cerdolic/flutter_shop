@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/theme/colors.dart';
-import 'package:shop/theme/text_styles.dart';
 
 class AppSettingsListTile extends StatelessWidget {
   const AppSettingsListTile({
@@ -23,7 +23,7 @@ class AppSettingsListTile extends StatelessWidget {
           contentPadding: EdgeInsets.zero,
           title: Text(
             title,
-            style: darkGunmetal_16_400,
+            style: context.textStyler.titleMedium,
           ),
           trailing: Switch(
             value: enabled,

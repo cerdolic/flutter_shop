@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/theme/images.dart';
-import 'package:shop/theme/text_styles.dart';
 import 'package:shop/widgets/button/google_button.dart';
 import 'package:shop/widgets/button/main_button.dart';
 import 'package:shop/widgets/input/labeled_input.dart';
@@ -26,20 +26,20 @@ class _LoginScreenState extends State<LoginScreen> {
             Column(
               children: [
                 Text(
-                  'Hello Again!',
-                  style: darkGunmetal_28_500,
+                  context.localizer.helloAgain,
+                  style: context.textStyler.displayLarge,
                 ),
                 Text(
-                  'Welcome Back You’ve Been Missed!',
-                  style: auroMetalSaurus_16_400,
+                  context.localizer.youHaveBeenMissed,
+                  style: context.textStyler.titleMedium,
                 ),
               ],
             ),
             const SizedBox(height: 50),
-            const LabeledInput(labelText: 'Email Address'),
+            LabeledInput(labelText: context.localizer.emailAddress),
             const SizedBox(height: 30),
             LabeledInput(
-              labelText: 'Password',
+              labelText: context.localizer.password,
               isPassword: true,
               suffixIcon: SvgPicture.asset(eye),
             ),
@@ -47,14 +47,14 @@ class _LoginScreenState extends State<LoginScreen> {
             Align(
               alignment: Alignment.centerRight,
               child: Text(
-                'Recovery Password',
+                context.localizer.recoverPassword,
                 textAlign: TextAlign.right,
-                style: auroMetalSaurus_13_400,
+                style: context.textStyler.bodyMedium,
               ),
             ),
             const SizedBox(height: 30),
             MainButton(
-              title: 'Sign In',
+              title: context.localizer.signIn,
               onClick: () {},
             ),
             const SizedBox(height: 30),
@@ -66,8 +66,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Don’t have an account?',
-                      style: auroMetalSaurus_12_400,
+                      context.localizer.dontHaveAnAccount,
+                      style: context.textStyler.bodySmall,
                     ),
                     const SizedBox(width: 4),
                     GestureDetector(
@@ -75,8 +75,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         context.pop();
                       },
                       child: Text(
-                        'Sign Up for free',
-                        style: darkGunmetal_12_500,
+                        context.localizer.signUpForFree,
+                        style: context.textStyler.titleLarge,
                       ),
                     )
                   ],

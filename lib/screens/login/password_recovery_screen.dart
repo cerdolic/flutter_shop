@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/theme/text_styles.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/widgets/button/main_button.dart';
 import 'package:shop/widgets/input/labeled_input.dart';
 
@@ -17,21 +17,24 @@ class PasswordRecoveryScreen extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  'Recovery Password',
-                  style: darkGunmetal_28_500,
+                  context.localizer.recoverPassword,
+                  style: context.textStyler.displayLarge,
                 ),
                 Text(
-                  'Please Enter Your Email Address To Recieve a Verification Code',
+                  context
+                      .localizer.pleaseEnterYourEmailToReceiveVerificationCode,
                   textAlign: TextAlign.center,
-                  style: auroMetalSaurus_16_400,
+                  style: context.textStyler.titleMedium,
                 ),
               ],
             ),
             const SizedBox(height: 50),
-            const LabeledInput(labelText: 'Email Address'),
+            LabeledInput(
+              labelText: context.localizer.emailAddress,
+            ),
             const SizedBox(height: 30),
             MainButton(
-              title: 'Continue',
+              title: context.localizer.continue_,
               onClick: () {},
             ),
             const SizedBox(height: 30),

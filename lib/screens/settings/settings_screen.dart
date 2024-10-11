@@ -1,7 +1,11 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:shop/extensions.dart';
+import 'package:shop/main.dart';
 import 'package:shop/screens/settings/widget/account_list_section_title.dart';
 import 'package:shop/screens/settings/widget/account_list_tile.dart';
 import 'package:shop/screens/settings/widget/app_settings_list_tile.dart';
+import 'package:shop/screens/settings/widget/language_dropdown.dart';
 import 'package:shop/theme/images.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -12,11 +16,22 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  bool isDarkModeEnabled = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: LanguageDropdown(
+              selectedLocale: MyApp.getLocale(context),
+              onChanged: (locale) {
+                MyApp.setLocale(context, locale);
+              },
+            ),
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: CustomScrollView(
@@ -24,9 +39,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const SliverToBoxAdapter(
               child: SizedBox(height: 24),
             ),
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(
               child: AccountListSectionTitle(
-                title: 'Account',
+                title: context.localizer.account,
               ),
             ),
             SliverList(
@@ -34,19 +49,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 [
                   AccountListTile(
                     iconSvg: notifications,
-                    title: 'Notification Settings',
+                    title: context.localizer.notificationSettings,
                   ),
                   AccountListTile(
                     iconSvg: shopping,
-                    title: 'Shipping Address',
+                    title: context.localizer.shippingAddress,
                   ),
                   AccountListTile(
                     iconSvg: payment,
-                    title: 'Payment Info',
+                    title: context.localizer.paymentInfo,
                   ),
                   AccountListTile(
                     iconSvg: delete,
-                    title: 'Delete Account',
+                    title: context.localizer.deleteAccount,
                   ),
                 ],
               ),
@@ -54,21 +69,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const SliverToBoxAdapter(
               child: SizedBox(height: 40),
             ),
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(
               child: AccountListSectionTitle(
-                title: 'App Settings',
+                title: context.localizer.appSettings,
               ),
             ),
             SliverList(
               delegate: SliverChildListDelegate(
                 [
                   AppSettingsListTile(
-                    title: 'Dark Mode',
-                    enabled: isDarkModeEnabled,
+                    title: context.localizer.darkMode,
+                    enabled: AdaptiveTheme.of(context).mode.isDark,
                     onChanged: (value) {
-                      setState(() {
-                        isDarkModeEnabled = value;
-                      });
+                      if (value) {
+                        AdaptiveTheme.of(context).setDark();
+                      } else {
+                        AdaptiveTheme.of(context).setLight();
+                      }
                     },
                   ),
                 ],

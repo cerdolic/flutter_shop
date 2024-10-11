@@ -25,3 +25,4 @@ String delete = 'delete'.toSvgAsset();
 String cart = 'cart'.toSvgAsset();
 String delivery = 'delivery'.toSvgAsset();
 String logout = 'logout'.toSvgAsset();
+String drawer = 'drawer'.toSvgAsset();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/theme/text_styles.dart';
+import 'package:shop/extensions.dart';
 
 class LabeledInput extends StatefulWidget {
   const LabeledInput({
@@ -31,7 +31,7 @@ class _LabeledInputState extends State<LabeledInput> {
       children: <Widget>[
         Text(
           widget.labelText,
-          style: darkGunmetal_16_500,
+          style: context.textStyler.headlineSmall,
         ),
         SizedBox(
           height: widget.labelText.isNotEmpty ? 12 : 0,
@@ -57,7 +57,6 @@ class _LabeledInputState extends State<LabeledInput> {
                     ),
                     border: InputBorder.none,
                   ),
-                  // style: nickel_14_400,
                 ),
               ),
             ],

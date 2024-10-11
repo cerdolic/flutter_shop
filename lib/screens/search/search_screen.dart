@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/screens/search/search_state_notifier.dart';
 import 'package:shop/theme/images.dart';
 import 'package:shop/theme/text_styles.dart';
@@ -52,7 +53,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 FocusScope.of(context).unfocus();
               },
               child: Text(
-                'Cancel',
+                context.localizer.cancel,
                 style: unitedNationsBlue_14_500,
               ),
             ),
@@ -75,7 +76,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 fillColor: Colors.white,
                 filled: true,
                 hintText: 'Search Your Shoes',
-                hintStyle: auroMetalSaurus_14_400,
+                hintStyle: context.textStyler.bodyMedium,
                 prefixIconConstraints: const BoxConstraints(
                   maxWidth: 58,
                   maxHeight: 32,
@@ -100,7 +101,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                       tileColor: Colors.white,
                       leading: Text(
                         searchResults[index],
-                        style: darkGunmetal_14_400,
+                        style: context.textStyler.bodyLarge,
                       ),
                     ),
                   );

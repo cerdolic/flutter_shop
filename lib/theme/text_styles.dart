@@ -1,119 +1,94 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'colors.dart';
 
-TextStyle whiteText = const TextStyle(
-  color: Colors.white,
-);
+var mainFont = GoogleFonts.oswald();
 
-TextStyle darkGunmetalText = const TextStyle(
-  color: darkGunmetal,
-);
+TextStyle _baseTextStyle(Color color,
+    {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) {
+  return mainFont.copyWith(
+    color: color,
+    fontSize: fontSize,
+    fontWeight: fontWeight,
+  );
+}
 
-TextStyle auroMetalSaurusText = const TextStyle(
-  color: auroMetalSaurus,
-);
+TextStyle _whiteText(
+        {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) =>
+    _baseTextStyle(Colors.white, fontSize: fontSize, fontWeight: fontWeight);
 
-TextStyle unitedNationsBlueText = const TextStyle(
-  color: unitedNationsBlue,
-);
+TextStyle _darkGunmetalText(
+        {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) =>
+    _baseTextStyle(darkGunmetal, fontSize: fontSize, fontWeight: fontWeight);
 
-TextStyle darkGunmetal_12 = darkGunmetalText.copyWith(
-  fontSize: 12,
-);
+TextStyle _auroMetalSaurusText(
+        {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) =>
+    _baseTextStyle(auroMetalSaurus, fontSize: fontSize, fontWeight: fontWeight);
 
-TextStyle auroMetalSaurus_12 = auroMetalSaurusText.copyWith(
-  fontSize: 12,
-);
+TextStyle _unitedNationsBlueText(
+        {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) =>
+    _baseTextStyle(unitedNationsBlue,
+        fontSize: fontSize, fontWeight: fontWeight);
 
-TextStyle auroMetalSaurus_13 = auroMetalSaurusText.copyWith(
-  fontSize: 13,
-);
+TextStyle _ghostWhiteText(
+        {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) =>
+    _baseTextStyle(ghostWhite, fontSize: fontSize, fontWeight: fontWeight);
 
-TextStyle darkGunmetal_14 = darkGunmetalText.copyWith(
-  fontSize: 14,
-);
+TextStyle _brightGrayText(
+        {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) =>
+    _baseTextStyle(brightGray, fontSize: fontSize, fontWeight: fontWeight);
 
-TextStyle auroMetalSaurus_14 = auroMetalSaurusText.copyWith(
-  fontSize: 14,
-);
+TextStyle _abyssalAnchorfishBlueText(
+        {double fontSize = 14, FontWeight fontWeight = FontWeight.w400}) =>
+    _baseTextStyle(abyssalAnchorfishBlue,
+        fontSize: fontSize, fontWeight: fontWeight);
 
-TextStyle unitedNationsBlue_14 = unitedNationsBlueText.copyWith(
-  fontSize: 14,
-);
+TextStyle white_16_500 = _whiteText(fontSize: 16, fontWeight: FontWeight.w500);
+TextStyle white_18_500 = _whiteText(fontSize: 18, fontWeight: FontWeight.w500);
 
-TextStyle auroMetalSaurus_16 = auroMetalSaurusText.copyWith(
-  fontSize: 16,
-);
+TextStyle brightGray_12_400 = _brightGrayText(fontSize: 12);
+TextStyle brightGray_14_400 = _brightGrayText();
+TextStyle brightGray_16_400 = _brightGrayText(fontSize: 16);
 
-TextStyle darkGunmetal_16 = darkGunmetalText.copyWith(
-  fontSize: 16,
-);
+TextStyle ghostWhite_14_400 = _ghostWhiteText();
+TextStyle ghostWhite_14_500 =
+    _ghostWhiteText(fontSize: 14, fontWeight: FontWeight.w500);
+TextStyle ghostWhite_16_500 =
+    _ghostWhiteText(fontSize: 16, fontWeight: FontWeight.w500);
+TextStyle ghostWhite_18_500 =
+    _ghostWhiteText(fontSize: 18, fontWeight: FontWeight.w500);
+TextStyle ghostWhite_20_500 =
+    _ghostWhiteText(fontSize: 20, fontWeight: FontWeight.w500);
+TextStyle ghostWhite_24_500 =
+    _ghostWhiteText(fontSize: 24, fontWeight: FontWeight.w500);
+TextStyle ghostWhite_28_500 =
+    _ghostWhiteText(fontSize: 28, fontWeight: FontWeight.w500);
 
-TextStyle white_16 = whiteText.copyWith(
-  fontSize: 16,
-);
+TextStyle darkGunmetal_12_500 =
+    _darkGunmetalText(fontSize: 12, fontWeight: FontWeight.w500);
+TextStyle darkGunmetal_14_400 = _darkGunmetalText();
+TextStyle darkGunmetal_16_400 = _darkGunmetalText(fontSize: 16);
+TextStyle darkGunmetal_14_500 =
+    _darkGunmetalText(fontSize: 14, fontWeight: FontWeight.w500);
+TextStyle darkGunmetal_16_500 =
+    _darkGunmetalText(fontSize: 16, fontWeight: FontWeight.w500);
+TextStyle darkGunmetal_18_500 =
+    _darkGunmetalText(fontSize: 18, fontWeight: FontWeight.w500);
+TextStyle darkGunmetal_20_500 =
+    _darkGunmetalText(fontSize: 20, fontWeight: FontWeight.w500);
+TextStyle darkGunmetal_24_500 =
+    _darkGunmetalText(fontSize: 24, fontWeight: FontWeight.w500);
+TextStyle darkGunmetal_28_500 =
+    _darkGunmetalText(fontSize: 28, fontWeight: FontWeight.w500);
 
-TextStyle white_18 = whiteText.copyWith(
-  fontSize: 18,
-);
+TextStyle auroMetalSaurus_12_400 = _auroMetalSaurusText(fontSize: 12);
+TextStyle auroMetalSaurus_13_400 = _auroMetalSaurusText(fontSize: 13);
+TextStyle auroMetalSaurus_14_400 = _auroMetalSaurusText();
+TextStyle auroMetalSaurus_16_400 = _auroMetalSaurusText(fontSize: 16);
 
-TextStyle darkGunmetal_18 = darkGunmetalText.copyWith(
-  fontSize: 18,
-);
+TextStyle unitedNationsBlue_14_500 =
+    _unitedNationsBlueText(fontWeight: FontWeight.w500);
 
-TextStyle darkGunmetal_28 = darkGunmetalText.copyWith(
-  fontSize: 28,
-);
-
-TextStyle auroMetalSaurus_12_400 = auroMetalSaurus_12.copyWith(
-  fontWeight: FontWeight.w400,
-);
-
-TextStyle auroMetalSaurus_13_400 = auroMetalSaurus_13.copyWith(
-  fontWeight: FontWeight.w400,
-);
-
-TextStyle auroMetalSaurus_14_400 = auroMetalSaurus_14.copyWith(
-  fontWeight: FontWeight.w400,
-);
-
-TextStyle darkGunmetal_14_400 = darkGunmetal_14.copyWith(
-  fontWeight: FontWeight.w400,
-);
-
-TextStyle auroMetalSaurus_16_400 = auroMetalSaurus_16.copyWith(
-  fontWeight: FontWeight.w400,
-);
-
-TextStyle darkGunmetal_12_500 = darkGunmetal_12.copyWith(
-  fontWeight: FontWeight.w500,
-);
-
-TextStyle unitedNationsBlue_14_500 = unitedNationsBlue_14.copyWith(
-  fontWeight: FontWeight.w500,
-);
-
-TextStyle darkGunmetal_16_400 = darkGunmetal_16.copyWith(
-  fontWeight: FontWeight.w400,
-);
-
-TextStyle darkGunmetal_16_500 = darkGunmetal_16.copyWith(
-  fontWeight: FontWeight.w500,
-);
-
-TextStyle darkGunmetal_18_500 = darkGunmetal_18.copyWith(
-  fontWeight: FontWeight.w500,
-);
-
-TextStyle white_16_500 = white_16.copyWith(
-  fontWeight: FontWeight.w500,
-);
-
-TextStyle white_18_500 = white_18.copyWith(
-  fontWeight: FontWeight.w500,
-);
-
-TextStyle darkGunmetal_28_500 = darkGunmetal_28.copyWith(
-  fontWeight: FontWeight.w500,
-);
+TextStyle abyssalAnchorfishBlue_18_500 =
+    _abyssalAnchorfishBlueText(fontSize: 18, fontWeight: FontWeight.w500);

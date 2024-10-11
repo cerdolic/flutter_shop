@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/theme/colors.dart';
-import 'package:shop/theme/text_styles.dart';
 
 class MainButton extends StatelessWidget {
   const MainButton({
@@ -33,7 +33,7 @@ class MainButton extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: white_18_500,
+            style: context.textStyler.labelLarge,
           ),
         ),
       ),
