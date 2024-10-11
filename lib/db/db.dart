@@ -7,6 +7,8 @@ class Db {
 
   Db._();
 
+  Future<void> init() async {}
+
   Future<void> setUser(User user) async {}
 
   Future<User?> getUser(String userId) async {
