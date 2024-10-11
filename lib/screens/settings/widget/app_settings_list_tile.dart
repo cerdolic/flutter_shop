@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/theme/colors.dart';
 import 'package:shop/theme/text_styles.dart';
 
 class AppSettingsListTile extends StatelessWidget {
@@ -16,26 +15,17 @@ class AppSettingsListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        ListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(
-            title,
-            style: darkGunmetal_16_400,
-          ),
-          trailing: Switch(
-            value: enabled,
-            onChanged: onChanged,
-          ),
-          onTap: () {},
-        ),
-        const Divider(
-          height: 1,
-          color: brightGray,
-        )
-      ],
+    return ListTile(
+      contentPadding: EdgeInsets.zero,
+      title: Text(
+        title,
+        style: darkGunmetal_16_400,
+      ),
+      trailing: Switch(
+        value: enabled,
+        onChanged: onChanged,
+      ),
+      onTap: () {},
     );
   }
 }

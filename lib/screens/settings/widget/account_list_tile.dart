@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop/theme/colors.dart';
 import 'package:shop/theme/images.dart';
 import 'package:shop/theme/text_styles.dart';
 
@@ -16,24 +15,15 @@ class AccountListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        ListTile(
-          contentPadding: EdgeInsets.zero,
-          leading: SvgPicture.asset(iconSvg),
-          title: Text(
-            title,
-            style: darkGunmetal_16_400,
-          ),
-          trailing: SvgPicture.asset(arrow),
-          onTap: () {},
-        ),
-        const Divider(
-          height: 1,
-          color: brightGray,
-        )
-      ],
+    return ListTile(
+      contentPadding: EdgeInsets.zero,
+      leading: SvgPicture.asset(iconSvg),
+      title: Text(
+        title,
+        style: darkGunmetal_16_400,
+      ),
+      trailing: SvgPicture.asset(arrow),
+      onTap: () {},
     );
   }
 }

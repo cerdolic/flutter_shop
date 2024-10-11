@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop/screens/settings/widget/account_list_section_title.dart';
 import 'package:shop/screens/settings/widget/account_list_tile.dart';
 import 'package:shop/screens/settings/widget/app_settings_list_tile.dart';
+import 'package:shop/theme/colors.dart';
 import 'package:shop/theme/images.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -29,9 +30,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 title: 'Account',
               ),
             ),
-            SliverList(
-              delegate: SliverChildListDelegate(
-                [
+            SliverList.separated(
+              itemBuilder: (context, index) {
+                final items = [
                   AccountListTile(
                     iconSvg: notifications,
                     title: 'Notification Settings',
@@ -48,8 +49,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     iconSvg: delete,
                     title: 'Delete Account',
                   ),
-                ],
+                ];
+                return items[index];
+              },
+              separatorBuilder: (context, index) => const Divider(
+                height: 1,
+                color: brightGray,
               ),
+              itemCount: 4,
             ),
             const SliverToBoxAdapter(
               child: SizedBox(height: 40),
@@ -59,9 +66,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 title: 'App Settings',
               ),
             ),
-            SliverList(
-              delegate: SliverChildListDelegate(
-                [
+            SliverList.separated(
+              itemBuilder: (context, index) {
+                final items = [
                   AppSettingsListTile(
                     title: 'Dark Mode',
                     enabled: isDarkModeEnabled,
@@ -70,9 +77,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         isDarkModeEnabled = value;
                       });
                     },
-                  ),
-                ],
+                  )
+                ];
+                return items[index];
+              },
+              separatorBuilder: (context, index) => const Divider(
+                height: 1,
+                color: brightGray,
               ),
+              itemCount: 1,
             ),
           ],
         ),
