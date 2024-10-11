@@ -10,7 +10,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<LoadUser>((event, emit) async {
       emit(UserLoading());
       try {
-        final user = await getIt<Db>().getUser(event.userId);
+        final user = await getIt<Db>().getUser();
         if (user != null) {
           emit(UserLoaded(user));
         } else {

@@ -11,7 +11,7 @@ class Db {
 
   Future<void> setUser(User user) async {}
 
-  Future<User?> getUser(String userId) async {
+  Future<User?> getUser() async {
     return null;
   }
 

@@ -7,12 +7,10 @@ abstract class UserEvent extends Equatable {
 }
 
 class LoadUser extends UserEvent {
-  final String userId;
-
-  LoadUser(this.userId);
+  LoadUser();
 
   @override
-  List<Object?> get props => [userId];
+  List<Object?> get props => [];
 }
 
 class SaveUser extends UserEvent {
