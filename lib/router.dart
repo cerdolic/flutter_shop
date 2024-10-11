@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shop/screens/login/login_screen.dart';
 import 'package:shop/screens/login/signup_screen.dart';
+import 'package:shop/screens/user/user_screen.dart';
 
 var routes = [
   GoRoute(
@@ -11,6 +12,10 @@ var routes = [
   GoRoute(
     path: '/login',
     builder: (context, state) => const LoginScreen(),
+  ),
+  GoRoute(
+    path: '/user',
+    builder: (context, state) => const UserScreen(),
   ),
   GoRoute(
     path: '/product_card/:id',

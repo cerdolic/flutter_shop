@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shop/db/db.dart';
 import 'package:shop/router.dart';
 import 'package:shop/theme/colors.dart';
 
-void main() {
+GetIt getIt = GetIt.instance;
+
+void main() async {
+  getIt.registerSingleton<Db>(Db.instance);
+
+  await getIt<Db>().init();
+
   runApp(
     ProviderScope(
       child: MyApp(),
