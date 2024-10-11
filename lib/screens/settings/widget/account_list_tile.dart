@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/theme/colors.dart';
 import 'package:shop/theme/images.dart';
-import 'package:shop/theme/text_styles.dart';
 
 class AccountListTile extends StatelessWidget {
   const AccountListTile({
@@ -24,7 +24,7 @@ class AccountListTile extends StatelessWidget {
           leading: SvgPicture.asset(iconSvg),
           title: Text(
             title,
-            style: darkGunmetal_16_400,
+            style: context.textStyler.titleMedium,
           ),
           trailing: SvgPicture.asset(arrow),
           onTap: () {},

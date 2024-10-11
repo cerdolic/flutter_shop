@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/theme/colors.dart';
-import 'package:shop/theme/text_styles.dart';
 import 'package:shop/widgets/image/tinted_svg.dart';
 
 class DrawerItem extends StatelessWidget {
@@ -28,7 +28,7 @@ class DrawerItem extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: darkGunmetal_18_500,
+        style: context.textStyler.headlineMedium,
       ),
     );
   }

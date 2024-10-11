@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/screens/settings/settings_screen.dart';
 import 'package:shop/screens/tabs/widget/drawer_item.dart';
 import 'package:shop/theme/colors.dart';
 import 'package:shop/theme/images.dart';
-import 'package:shop/theme/text_styles.dart';
 import 'package:shop/widgets/image/tinted_svg.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -35,7 +35,6 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(),
       drawer: Drawer(
-        backgroundColor: Colors.white,
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
@@ -62,48 +61,44 @@ class _TabsScreenState extends State<TabsScreen> {
                   const SizedBox(height: 24),
                   Text(
                     'Hey, 👋',
-                    style: auroMetalSaurus_16_400,
+                    style: context.textStyler.titleMedium,
                   ),
                   const SizedBox(height: 6),
-                  const Text(
+                  Text(
                     'Alisson Becker',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: context.textStyler.displayMedium,
                   )
                 ],
               ),
             ),
             const SizedBox(height: 32),
             DrawerItem(
-              title: 'Profile',
+              title: context.localizer.profile,
               onTap: () {},
               iconSvg: profile,
             ),
             DrawerItem(
-              title: 'Home Page',
+              title: context.localizer.homePage,
               onTap: () {},
               iconSvg: home,
             ),
             DrawerItem(
-              title: 'My Cart',
+              title: context.localizer.myCart,
               onTap: () {},
               iconSvg: cart,
             ),
             DrawerItem(
-              title: 'Favorite',
+              title: context.localizer.favorite,
               onTap: () {},
               iconSvg: favorite,
             ),
             DrawerItem(
-              title: 'Orders',
+              title: context.localizer.orders,
               onTap: () {},
               iconSvg: delivery,
             ),
             DrawerItem(
-              title: 'Notifications',
+              title: context.localizer.notifications,
               onTap: () {},
               iconSvg: notifications,
             ),
@@ -116,7 +111,7 @@ class _TabsScreenState extends State<TabsScreen> {
             ),
             const SizedBox(height: 36),
             DrawerItem(
-              title: 'Sign Out',
+              title: context.localizer.signOut,
               onTap: () {},
               iconSvg: logout,
             ),
@@ -125,7 +120,6 @@ class _TabsScreenState extends State<TabsScreen> {
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,

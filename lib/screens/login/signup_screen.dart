@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shop/extensions.dart';
 import 'package:shop/theme/images.dart';
-import 'package:shop/theme/text_styles.dart';
 import 'package:shop/widgets/button/google_button.dart';
 import 'package:shop/widgets/button/main_button.dart';
 import 'package:shop/widgets/input/labeled_input.dart';
@@ -26,28 +26,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Column(
               children: [
                 Text(
-                  'Create Account',
-                  style: darkGunmetal_28_500,
+                  context.localizer.createAccount,
+                  style: context.textStyler.displayLarge,
                 ),
                 Text(
-                  'Let’s Create Account Together',
-                  style: auroMetalSaurus_16_400,
+                  context.localizer.letsCreateAccountTogether,
+                  style: context.textStyler.titleMedium,
                 ),
               ],
             ),
             const SizedBox(height: 50),
-            const LabeledInput(labelText: 'Your Name'),
+            LabeledInput(labelText: context.localizer.yourName),
             const SizedBox(height: 30),
-            const LabeledInput(labelText: 'Email Address'),
+            LabeledInput(labelText: context.localizer.emailAddress),
             const SizedBox(height: 30),
             LabeledInput(
-              labelText: 'Password',
+              labelText: context.localizer.password,
               isPassword: true,
               suffixIcon: SvgPicture.asset(eye),
             ),
             const SizedBox(height: 30),
             MainButton(
-              title: 'Sign In',
+              title: context.localizer.signIn,
               onClick: () {},
             ),
             const SizedBox(height: 30),
@@ -59,8 +59,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Already have an account?',
-                      style: auroMetalSaurus_12_400,
+                      context.localizer.alreadyHaveAnAccount,
+                      style: context.textStyler.bodySmall,
                     ),
                     const SizedBox(width: 4),
                     GestureDetector(
@@ -68,8 +68,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         context.pushNamed('/login');
                       },
                       child: Text(
-                        'Sign in',
-                        style: darkGunmetal_12_500,
+                        context.localizer.signIn,
+                        style: context.textStyler.headlineSmall,
                       ),
                     )
                   ],

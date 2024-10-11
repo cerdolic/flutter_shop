@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/theme/text_styles.dart';
+import 'package:shop/extensions.dart';
 
 class AccountListSectionTitle extends StatelessWidget {
   const AccountListSectionTitle({
@@ -13,7 +13,7 @@ class AccountListSectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: darkGunmetal_18_500,
+      style: context.textStyler.headlineMedium,
     );
   }
 }
